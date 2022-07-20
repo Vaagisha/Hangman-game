@@ -2,7 +2,6 @@
   font-size:large;
   text-align: right;
   padding: 10px 50px 10px;
-  /* padding-top: 10px; */
   background-color:rgb(110, 132, 132);
   color: white;
   margin: 0%;
@@ -32,11 +31,6 @@
     min-width: 1000px;
     margin: auto;
 }
-/*
-.main-flex-container > div{
-  margin: 8px;
-  padding: 8px;
-}  */
 
 .button{
   color:aliceblue;
@@ -47,6 +41,7 @@
   font-size: small;
   height: 50px; 
   width: 50px;
+  transition: 500ms ease-in-out;
 }
 
 .button:hover{
@@ -75,7 +70,6 @@ button[disabled],button[disabled]:hover,#hint[disabled]:hover{
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
-  cursor: not-allowed;
   box-shadow: 0 0 0 0;
 }
 
@@ -118,10 +112,6 @@ button[disabled],button[disabled]:hover,#hint[disabled]:hover{
     margin: auto;
     object-fit:fill;
   }
-/* #myCanvas{
-    width: 20%;
-    height: 30%;
-  } */
   .main-flex-container{
     min-width: 600px;
     margin: auto;
@@ -165,10 +155,6 @@ button[disabled],button[disabled]:hover,#hint[disabled]:hover{
     min-width: 600px;
     margin: auto;
   }
-/* #myCanvas{
-    width: 20%;
-    height: 30%;
-  } */
  }
  @media (max-width:960px) { 
     body {
@@ -195,10 +181,6 @@ button[disabled],button[disabled]:hover,#hint[disabled]:hover{
     #wordDisplay{
       font-size: 70%;
     }
-    /* } #myCanvas{
-      width: 20%;
-      height: 30%;
-    } */
     #letter-table{
       height:50%;
     }
@@ -215,11 +197,6 @@ button[disabled],button[disabled]:hover,#hint[disabled]:hover{
   body {
     font-size: 100%;
   }
-  /* .button{
-  height: 100%;
-  width: 100%;
-  font-size: 1rem;
-  }  */
   .column {
     width: 50%;
     float: right;
@@ -231,14 +208,6 @@ button[disabled],button[disabled]:hover,#hint[disabled]:hover{
     display: table;
     clear: both;
   }
-  /* #myCanvas{
-    width: 20%;
-    height: 30%;
-  } */
-  /* #letter-table{
-     padding-right: 0%; 
-    margin-left: 50px;
-  } */
   .flex-container{
     display: flex;
     flex-flow: row wrap; 
