@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>HANGMAN</title>
+  <head>
+    <script defer src="hangman.js"></script>
+    <link rel="stylesheet" href="hangman.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <section>
+      <div id="hangman">
+        <h2 align = "center">HANGMAN</h2>
+      </div>
+      <div id="time">
+        <span>TIME :</span>
+      </div>
+    </section>
+    <section><div class="main-flex-container">
+    <div class = "flex-container column" id="letter-table">
+      <div><button type = "button" class ="button" id ="btnA" onclick="takeLetter(this)">A</div><div><button type = "button" class ="button" id ="btnB" onclick="takeLetter(this)">B</div><div><button type = "button" class ="button" id ="btnC" onclick="takeLetter(this)">C</div>
+      <div><button type = "button" class ="button" id ="btnD" onclick="takeLetter(this)">D</div><div><button type = "button" class ="button" id ="btnE" onclick="takeLetter(this)">E</div><div><button type = "button" class ="button" id ="btnF" onclick="takeLetter(this)">F</div>
+      <div><button type = "button" class ="button" id ="btnG" onclick="takeLetter(this)">G</div><div><button type = "button" class ="button" id ="btnH" onclick="takeLetter(this)">H</div><div><button type = "button" class ="button" id ="btn" onclick="takeLetter(this)">I</div>
+      <div><button type = "button" class ="button" id ="btnJ" onclick="takeLetter(this)">J</div><div><button type = "button" class ="button" id ="btnK" onclick="takeLetter(this)">K</div><div><button type = "button" class ="button" id ="btnL" onclick="takeLetter(this)">L</div>
+      <div><button type = "button" class ="button" id ="btnM" onclick="takeLetter(this)">M</div><div><button type = "button" class ="button" id ="btnN" onclick="takeLetter(this)">N</div><div><button type = "button" class ="button" id ="btnO" onclick="takeLetter(this)">O</div>
+      <div><button type = "button" class ="button" id ="btnP" onclick="takeLetter(this)">P</div><div><button type = "button" class ="button" id ="btnQ" onclick="takeLetter(this)">Q</div><div><button type = "button" class ="button" id ="btnR" onclick="takeLetter(this)">R</div>
+      <div><button type = "button" class ="button" id ="btnS" onclick="takeLetter(this)">S</div><div><button type = "button" class ="button" id ="btnT" onclick="takeLetter(this)">T</div><div><button type = "button" class ="button" id ="btnU" onclick="takeLetter(this)">U</div>
+      <div><button type = "button" class ="button" id ="btnV" onclick="takeLetter(this)">V</div><div><button type = "button" class ="button" id ="btnW" onclick="takeLetter(this)">W</div><div><button type = "button" class ="button" id ="btnX" onclick="takeLetter(this)">X</div>
+      <div><button type = "button" class ="button" id ="btnY" onclick="takeLetter(this)">Y</div><div><button type = "button" class ="button" id ="btnZ" onclick="takeLetter(this)">Z</div>
+    </div>
+    <div class ="column" id ="man"><br><br>
+    <canvas id="myCanvas" width="200" height="200" style="border:1px solid #d3d3d3;"></canvas></div>
+       </canvas>
+    </div></section>
+    
+    <section><div>
+      <p id = "description"></p>
+    </div></section>
+        
+     <section><div class="flex-container" id="wordDisplay">
+      <!--  <p>Guess the word<br>_ _ _ _ _</p>   -->
+       
+       <div id="0"></div>
+       <div id="1"></div>
+       <div id="2"></div>
+       <div id="3"></div>
+       <div id="4"></div>
+       <div id="5"></div>
+       <div id="6"></div>
+       <div id="7"></div>
+       <div id="8"></div>
+       <div id="9"></div>
+     </div></section>
+        
+     <section><div class="flex-container">
+        <div><button type = " button" id="play-again" onclick="window.location.reload()">PLAY AGAIN</button></div>
+          <div id="display"><button type = "button" id = "hint" onclick="hint()">HINT</button></div>
+       </div></section>
+  </body>
+
+</html>
