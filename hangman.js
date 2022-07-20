@@ -62,10 +62,8 @@ let x,j;
 function representWord(){
   x = Math.floor(Math.random() * 26);
   j = 0;
- //console.log(collectionOfWords[x]);
 for(let i = 0; i < collectionOfWords[x].length; i++){
    document.getElementById(`${i}`).innerHTML = "_";
-    //console.log("_");
 }
 while(j < 2){
     i = Math.floor(Math.random() * collectionOfWords[x].length);
@@ -88,7 +86,9 @@ function timeInterval(){
   }
   document.getElementById("time").innerHTML=`TIME : ${timeVariable}`;
   timeVariable--;
-  //console.log("---time1---",timeVariable);
+}
+function removeElem(elem){
+  elem.style.setProperty("opacity","0");
 }
 
 //FUNCTION FOR TAKING INPUT AND FOR MATCHING
@@ -97,19 +97,18 @@ function takeLetter(obj){
   let  elementId = obj.id, flag = 0;
   var str1 = document.getElementById(`${elementId}`).innerHTML; 
   document.getElementById(`${elementId}`).disabled = "true";
+
   for(let i = 0; i < collectionOfWords[x].length; i++){
     if(str1 == collectionOfWords[x][i] && document.getElementById(`${i}`).innerHTML === "_"){
-      console.log('----in print')
+      var elem = document.getElementById(`${elementId}`);
+      removeElem(elem);
       document.getElementById(`${i}`).innerHTML = str1;
       count1++;
-      //console.log("c1: str: ",count1,str1);
     }
     else{
       flag++;
     }
-    console.log('----', flag, count1, count2);
      if( count1 == collectionOfWords[x].length - 2){
-      //  console.log('----in alert')
         setTimeout(function() {
   	    alert("YOU WIN!!!!!!!");
   },10);
@@ -118,10 +117,11 @@ function takeLetter(obj){
         break;
       }
       if(flag >= collectionOfWords[x].length){
+        var elem = document.getElementById(`${elementId}`);
+        removeElem(elem);
         count2++;
       var canvas = document.getElementById("myCanvas");
       var ctx = canvas.getContext("2d");
-     // console.log("c2: ",count2);
       switch(count2){
         case 1:
           ctx.moveTo(0,200);
@@ -181,12 +181,10 @@ function takeLetter(obj){
      }
     }
 }
-// console.log(count1);
 
 //FUNCTION FOR THE HINT BUTTON
 function hint(){
   document.getElementById("hint").disabled = "true";
   document.getElementById("description").innerHTML = "HINT:  "+collectionOfHints[x];
-  console.log(collectionOfHints[x]);
 }
 
